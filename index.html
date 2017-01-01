@@ -11,49 +11,48 @@ h1.serif {
 </head>
 <body>
  <h1 class="serif"; align="center";>Real-time and periodical drinking water measurements</h1>
- 
+ <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAYOZ4tjUcxpi7tRTRcYrck6wiDkHTs12U'></script>
+ <div style='overflow:hidden;height:700px;width:1650px;margin:auto;'>
+     <div id='gmap_canvas' style='height:700px;width:1650px;'></div>
+     <style>
+         #gmap_canvas img {
+             max-width: none!important;
+             background: none!important
+         }
+     </style>
+ </div> <a href='http://maps-generator.com/nl'>
+ <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=a6c65e72401622b7650f2053270b7272fd7e02fb'></script>
+ <script type='text/javascript'>
+     function init_map() {
+         var myOptions = {
+             zoom: 2,
+             center: new google.maps.LatLng(52.2226, 4.4827999999999975),
+             mapTypeId: google.maps.MapTypeId.ROADMAP
+         };
+         map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+         marker = new google.maps.Marker({
+             map: map,
+             position: new google.maps.LatLng(52.2226, 4.4827999999999975)
+         });
+         infowindow = new google.maps.InfoWindow({
+             content: '<strong></strong><br><br> Voorhout<br>'
+         });
+
+         infowindow.open(map, marker);
+		
+         marker = new google.maps.Marker({
+             map: map,
+             position: new google.maps.LatLng(42.2226, 4.4827999999999975)
+         });
+         infowindow = new google.maps.InfoWindow({
+             content: '<strong></strong><br><br> Voorhout<br>'
+         });
+
+         infowindow.open(map, marker);
+     }
+     google.maps.event.addDomListener(window, 'load', init_map);
+ </script>
 </body>
 </html>
 
 
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAYOZ4tjUcxpi7tRTRcYrck6wiDkHTs12U'></script>
-<div style='overflow:hidden;height:700px;width:1650px;margin:auto;'>
-    <div id='gmap_canvas' style='height:700px;width:1650px;'></div>
-    <style>
-        #gmap_canvas img {
-            max-width: none!important;
-            background: none!important
-        }
-    </style>
-</div> <a href='http://maps-generator.com/nl'>
-<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=a6c65e72401622b7650f2053270b7272fd7e02fb'></script>
-<script type='text/javascript'>
-    function init_map() {
-        var myOptions = {
-            zoom: 2,
-            center: new google.maps.LatLng(52.2226, 4.4827999999999975),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-        marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(52.2226, 4.4827999999999975)
-        });
-        infowindow = new google.maps.InfoWindow({
-            content: '<strong></strong><br><br> Voorhout<br>'
-        });
-
-        infowindow.open(map, marker);
-		
-        marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(42.2226, 4.4827999999999975)
-        });
-        infowindow = new google.maps.InfoWindow({
-            content: '<strong></strong><br><br> Voorhout<br>'
-        });
-
-        infowindow.open(map, marker);
-    }
-    google.maps.event.addDomListener(window, 'load', init_map);
-</script>

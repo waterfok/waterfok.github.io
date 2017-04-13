@@ -11,7 +11,10 @@
 <script>
 	function myFunction() {
 	
-alert("hello");
+		setU8to(chain.data + 0, 0xeb);
+		setU8to(chain.data + 1, 0xfe);
+
+		chain.add(chain.data);
 }
 </script>
 
